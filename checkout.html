@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>eGourmery</title>
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+	<!-- icons -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<!-- styles -->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<section>
+	<div class="checkout container">
+		<div class="checkout-header">
+			<div class="checkout-nav">
+				<a href="#">Start</a>
+				<i class="fa fa-caret-right" aria-hidden="true"></i>
+				<a href="#">Bestellung</a>
+			</div>
+			<h2>Bestellung</h2>
+		</div>
+
+		<div class="checkout-window">
+			<div style="width: 725px;">
+				<div class="checkout-type">
+					<a href="#">NEW CUSTOMER</a>
+					<a href="#">HAVE AN ACCOUNT</a>
+				</div>
+
+				<div class="checkout-steps">
+					<div class="checkout-step">
+						<span>1</span>
+						<p>Benutzerdaten</p>
+					</div>
+					<div class="checkout-step">
+						<span>2</span>
+						<p>Address und Lieferzeit</p>
+					</div>
+					<div class="checkout-step">
+						<span>3</span>
+						<p>Zahlungsart</p>
+					</div>
+				</div>
+
+				<form class="user_data-form" action="#" method="POST">
+					<h3>Add your details</h3>
+					<p>Name</p>
+					<input type="text">
+					<p>Vorname </p>
+					<input type="text">
+					<p>Phone number</p>
+					<input type="text">
+					<p>E-mail</p>
+					<input type="text">
+					<input id="button" type="submit" value="Weiter">
+				</form>
+
+				<form class="delivery_time" action="#" method="POST">
+					<div style="display: flex;">
+					<div class="adres">
+						<h2>Add new address</h2>
+						<p>Stadt</p>
+						<input type="text">
+						<p>Street</p>
+						<input type="text">
+						<div class="exact_address">
+							<div>
+								<p>Haus</p>
+								<input type="text">
+							</div>
+							<div>
+								<p>Wohnung</p>
+								<input type="text">
+							</div>
+							<div>
+								<p>index</p>
+								<input type="text">
+							</div>
+						</div>
+					</div>
+					<div class="time">
+						<h2>Wählen Sie die Lieferzeit aus</h2>
+						<div class="exact_time">
+							<div>
+								<p>Datum</p>
+								<input type="text">
+							</div>
+							<div>
+								<p>Zeit</p>
+								<input type="text">
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="delivery_time-buttons">
+						<button>zurück</button>
+						<button>Weiter</button>
+					</div>
+				</form>
+
+				<form action="#" class="Payment" method="POST">
+					<div class="pay-system">
+						<h2>Choose the payment method</h2>
+						<div class="pay-system-card">
+							<h5>Barzahlung</h5>
+							<input type="radio" id="cash_payment" class="cash_payment">
+							<label style="margin-bottom: 19px;" for="cash_payment"></label>
+							<img style="height: 22px;" src="img/cash_payment.png" alt="cash_payment">
+						</div>
+						<div class="pay-system-card">
+							<h5>Kreditkarte</h5>
+							<input type="radio" id="cash_payment2" class="cash_payment">
+							<label for="cash_payment2"></label>
+							<img src="img/Visa.png" alt="Visa">
+						</div>
+						<div class="pay-system-card">
+							<h5>PayPal</h5>
+							<input type="radio" id="cash_payment3" class="cash_payment">
+							<label for="cash_payment3"></label>
+							<img src="img/PayPal_logo.png" alt="paypal">
+						</div>
+						<div class="pay-system-card">
+							<h5>Sofort</h5>
+							<input type="radio" id="cash_payment4" class="cash_payment">
+							<label for="cash_payment4"></label>
+							<img src="img/sofort.png" alt="sofort">
+						</div>
+						<div class="pay-system-card">
+							<h5>Essenscheck</h5>
+							<input type="radio" id="cash_payment5" class="cash_payment">
+							<label style="margin-bottom: 19px;" for="cash_payment5"></label>
+							<div><img style="margin: 0;" src="img/Ticket.png" alt="Ticket">
+							<img style="margin: 0;" src="img/Sodexo_logo.png" alt="Sodexo"></div>
+						</div>
+						<div class="conditions">
+							<input type="checkbox" id="accept" class="user_conditions">
+							<label  for="accept">Hiermit akzeptiere ich die <a href="#">AGB</a> und <a href="#"> Datenschutzerklärung</a> von eGourmery</label>
+							<input type="checkbox" id="notification" class="user_conditions">
+							<label for="notification">Ich will uber Neuigkeiten per eMail informiert werden! <a href="#">(Widerrufsbelehrung)</a>></label>
+						</div>
+						<div class="enter-details">
+							<h3 style="margin-bottom: 10px;">Enter your payment details</h3>
+							<div class="user-info">
+								<h4>Cardholder Name</h4>
+								<input type="text">
+								<h4>Experation</h4>
+								<div id="calendar">
+									<p>January (01)<i class="fa fa-caret-down" aria-hidden="true"></i></p>
+									<p>2021 <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+								</div>
+							</div>
+							<div class="credit-card">
+								<h4>Credit Card Number</h4>
+								<input type="text">
+								<h4>CVC code</h4>
+								<input style="width: 84px;" type="password">
+							</div>
+							<div class="comentary">
+								<h3>Kommentar zur Bestellung</h3>
+								<textarea name="coment" id="coment" cols="30" rows="10"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="cupon">
+						<h4>Promocode</h4>
+						<input type="text" placeholder="COUPON1_1">
+						<button>anwenden</button>
+					</div>
+
+					<div class="mortgage-credit">
+						<div class="prepayment">
+							<h3>Pfand-Guthaben</h3>
+							<h4>Ihr aktuelles Pfand-Guthaben aus der Rechnung 891299 vom 27.02.2018 beträgt:</h4>
+							<ul>
+								<li>
+									Pfand 4*0,25= 1,00 € 
+									<button><img src="icons/Line.svg" alt="-"></button>
+								</li>
+								<li>
+									Pfand 8*0,25= 2,00 €
+									<button><img src="icons/Line.svg" alt="-"></button>
+								</li>
+								<li>
+									Pfand 1*0,25= 0,25 €
+									<button><img src="icons/Line.svg" alt="-"></button>
+								</li>
+								<li>
+									Pfand 6*0,15= 0,90 €
+									<button><img src="icons/Line.svg" alt="-"></button>
+								</li>
+								<li id="summe">
+									Summe	4,15 €*
+								</li>
+							</ul>
+							<p>*(die Anzahl und Bezeichnung des Pfandes, muss des abzugebendes Pfandes entsprechen, ansonsten kann die Rücknahme nicht gewährleistet werden)</p>
+						</div>
+						<div class="cancle-prepayment">
+							<p>Möchten Sie Ihr Pfand-Guthaben von der Bestellung <a href="#">298084</a> und <a href="#">1098388</a> verrechen und auch dem Fahrer bei der Lieferung überreichen? </p>
+							<input type="checkbox" id="yes">
+							<label for="yes">Ja, ich möchte</label>
+							<br>
+							<br>
+							<input type="checkbox" id="no">
+							<label for="no">Nein, ich gebe den Pfand woanders ab und verzichte auf die Gutschrift</label>
+						</div>
+					</div>
+
+					<div class="Payment-buttons">
+						<button>zurück</button>
+						<button>ABSCHLIESSEN</button>
+					</div>
+				</form>
+
+				<form class="enter-details_form" action="#" method="POST">
+					<h3>Enter your details</h3>
+					<p>E-mail</p>
+					<input type="text">
+					<p>Passwort</p>
+					<input type="text"><br>
+					<a href="#">Forgot a Passwort?</a>
+					<input id="login" type="submit" value="Login">
+				</form>
+
+				<form class="adress-choosing" action="#" method="POST">
+					<div class="Choose_address">
+						<h2>Choose your address</h2>
+						<div class="it_adress">
+							<input id="one" type="radio">
+							<label for="one">Yevheniia Konstantynova</label>
+							<p>Aria Hotel Zufuhrstraße 10 90443 Nürnberg</p>
+							<a href="#">edit</a>
+						</div>
+						<div class="it_adress">
+							<input id="two" type="radio">
+							<label for="two">Yevheniia Konstantynova</label>
+							<p>Neulichtenhofstr. 16, 90461 Nürnberg</p>
+							<a href="#">edit</a>
+						</div>
+						<div class="select-time">
+							<h2>Wählen Sie die Lieferzeit aus</h2>
+							<div style="display: flex; justify-content: center;">
+								<div>
+								<p>Datum</p>
+								<input type="text" id="date">
+								<label for="date">Mo, 2 April <i class="fa fa-caret-down" aria-hidden="true"></i></label></div>
+								<div style="margin-left: 15px;margin-right: 90px;"><p>Zeit</p>						
+								<input type="text" id="time">
+								<label for="time">14 : 30 <i class="fa fa-caret-down" aria-hidden="true"></i></label></div>
+							</div>
+						</div>
+					</div>
+					<div class="new_adress">
+						<h2>Or add new address</h2>
+						<p>Name</p>
+						<input type="text">
+						<p>Vorname</p>
+						<input type="text">
+						<p>Phone number</p>
+						<input type="text">
+						<p>Stadt</p>
+						<input type="text">
+						<p>Strasse</p>
+						<input type="text">
+						<ul class="exact_address">
+							<li>
+								<p>Haus</p>
+								<input type="text">
+							</li>
+							<li>
+								<p>Wohnung</p>
+								<input type="text">
+							</li>
+							<li>
+								<p>Index</p>
+								<input type="text">
+							</li>
+						</ul>
+						<div class="adress-choosing_bitton">
+							<input type="submit" value="Save">
+						</div>
+					</div>
+					
+				</form>
+
+
+				<form action="#" class="Payment2" method="POST">
+					<div class="pay-system">
+						<h2>Choose the payment method</h2>
+						<div class="pay-system-card">
+							<h5>Barzahlung</h5>
+							<input type="radio" id="cash_payment6" class="cash_payment">
+							<label style="margin-bottom: 19px;" for="cash_payment6"></label>
+							<img style="height: 22px;" src="img/cash_payment.png" alt="cash_payment">
+						</div>
+						<div class="pay-system-card">
+							<h5>Kreditkarte</h5>
+							<input type="radio" id="cash_payment7" class="cash_payment">
+							<label for="cash_payment7"></label>
+							<img src="img/Visa.png" alt="Visa">
+						</div>
+						<div class="pay-system-card">
+							<h5>PayPal</h5>
+							<input type="radio" id="cash_payment8" class="cash_payment">
+							<label for="cash_payment8"></label>
+							<img src="img/PayPal_logo.png" alt="paypal">
+						</div>
+						<div class="pay-system-card">
+							<h5>Sofort</h5>
+							<input type="radio" id="cash_payment9" class="cash_payment">
+							<label for="cash_payment9"></label>
+							<img src="img/sofort.png" alt="sofort">
+						</div>
+						<div class="pay-system-card">
+							<h5>Essenscheck</h5>
+							<input type="radio" id="cash_payment10" class="cash_payment">
+							<label style="margin-bottom: 19px;" for="cash_payment10"></label>
+							<div><img style="margin: 0;" src="img/Ticket.png" alt="Ticket">
+							<img style="margin: 0;" src="img/Sodexo_logo.png" alt="Sodexo"></div>
+						</div>
+
+
+						<div class="conditions">
+							<input type="checkbox" id="accept2" class="user_conditions">
+							<label  for="accept2">Hiermit akzeptiere ich die <a href="#">AGB</a> und <a href="#"> Datenschutzerklärung</a> von eGourmery</label>
+							<input type="checkbox" id="notification2" class="user_conditions">
+							<label for="notification2">Ich will uber Neuigkeiten per eMail informiert werden! <a href="#">(Widerrufsbelehrung)</a>></label>
+						</div>
+					</div>
+
+					<div class="cupon">
+						<h4>Promocode</h4>
+						<input type="text" placeholder="COUPON1_1">
+						<button>anwenden</button>
+					</div>
+
+					<div class="mortgage-credit">
+						<div class="prepayment">
+							<h3>Pfand-Guthaben</h3>
+							<h4>Ihr aktuelles Pfand-Guthaben aus der Rechnung 891299 vom 27.02.2018 beträgt:</h4>
+							<ul>
+								<li>
+									Pfand 4*0,25= 1,00 € 
+									<button><img src="icons/Line.svg" alt="-"></button>
+								</li>
+								<li>
+									Pfand 8*0,25= 2,00 €
+									<button><img src="icons/Line.svg" alt="-"></button>
+								</li>
+								<li>
+									Pfand 1*0,25= 0,25 €
+									<button><img src="icons/Line.svg" alt="-"></button>
+								</li>
+								<li>
+									Pfand 6*0,15= 0,90 €
+									<button><img src="icons/Line.svg" alt="-"></button>
+								</li>
+								<li id="summe">
+									Summe	4,15 €*
+								</li>
+							</ul>
+							<p>*(die Anzahl und Bezeichnung des Pfandes, muss des abzugebendes Pfandes entsprechen, ansonsten kann die Rücknahme nicht gewährleistet werden)</p>
+						</div>
+						<div class="cancle-prepayment">
+							<p>Möchten Sie Ihr Pfand-Guthaben von der Bestellung <a href="#">298084</a> und <a href="#">1098388</a> verrechen und auch dem Fahrer bei der Lieferung überreichen? </p>
+							<input type="checkbox" id="yes2">
+							<label for="yes2">Ja, ich möchte</label>
+							<br>
+							<br>
+							<input type="checkbox" id="no2">
+							<label for="no2">Nein, ich gebe den Pfand woanders ab und verzichte auf die Gutschrift</label>
+						</div>
+					</div>
+
+					<div class="Payment-buttons">
+						<button>zurück</button>
+						<button>ABSCHLIESSEN</button>
+					</div>
+				</form>
+			</div>
+
+			<div style="width: 577px;"> 
+				<div class="checkout-product">
+					<h3>Ihre Bestellung</h3>
+					<div class="product-in-cart">
+						<h6>Frische & Kühlung</h6>
+						<div class="product-in-cart_description">
+							<img src="img/in-cart.png" alt="product">
+							<p>REWE Beste Wahl Eier Freiland weiß Klasse M-L 10 Stück <br> <span>10 Stück</span></p>
+							<div class="quantity">
+								<button>+</button>
+								<p>1kg</p>
+								<button>-</button>
+							</div>
+							<p style="font-weight: 600; width: 30px;">7,99€</p>
+							<div class="delete">
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<div class="product-in-cart">
+						<h6>Frische & Kühlung</h6>
+						<div class="product-in-cart_description">
+							<img src="img/in-cart.png" alt="product">
+							<p>REWE Beste Wahl Eier Freiland weiß Klasse M-L 10 Stück <br> <span>10 Stück</span></p>
+							<div class="quantity">
+								<button>+</button>
+								<p>1kg</p>
+								<button>-</button>
+							</div>
+							<p style="font-weight: 600; width: 30px;">7,99€</p>
+							<div class="delete">
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<div class="product-in-cart">
+						<h6>Frische & Kühlung</h6>
+						<div class="product-in-cart_description">
+							<img src="img/in-cart.png" alt="product">
+							<p>REWE Beste Wahl Eier Freiland weiß Klasse M-L 10 Stück <br> <span>10 Stück</span></p>
+							<div class="quantity">
+								<button>+</button>
+								<p>1kg</p>
+								<button>-</button>
+							</div>
+							<p style="font-weight: 600; width: 30px;">7,99€</p>
+							<div class="delete">
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="total-price-board">
+					<div class="total-price_desc">
+						<h4>Warenkorb</h4>
+						<p>Mindestbestellwert 40€</p>
+						<h4 style="font-weight: 600">Liefergebühr<i class="fa fa-info-circle" aria-hidden="true"></i></h4>
+					</div>
+					<div class="total-price">
+						<h5>2092,99€</h5>
+						<h5>4€</h5>
+					</div>
+				</div>
+
+				<div class="total-price-inf-board">
+					<div id="info_icon">i</div>
+					<div class="total-price-inf_desc">
+						<h4>Gesamtsumme</h4>
+						<p>inkl.MwSt.</p>
+					</div>
+					<div class="inf-total-price">
+						<h5>2092,99€</h5>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
